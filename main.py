@@ -23,12 +23,12 @@ if user_bet:
 while is_race_on:
     for mbe in mbe_list:
         if mbe.xcor() > 310:
+            is_race_on = False
             winner = mbe.pencolor()
             if winner == user_bet:
                 print(f"You won! {winner.title()} was the winning turtle")
             else:
                 print(f"You lost! {winner.title()} was the winning turtle")
-            is_race_on = False
         speed = randint(0, 10)
         mbe.forward(speed)
 
